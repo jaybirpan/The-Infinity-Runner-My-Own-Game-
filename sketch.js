@@ -62,9 +62,9 @@ function setup(){
     topGround.addImage("topGround",topGroundImage);
     topGround.x = topGround.width/2;
     
-    ground.velocityX=-5;
-    topGround.velocityX=-5;
-    backGround.velocityX=-5;
+    ground.velocityX=-8;
+    topGround.velocityX=-8;
+    backGround.velocityX=-8;
 
     gameOver = createSprite(750,325);
     gameOver.addImage("gameOver",gameOverImg);
@@ -76,7 +76,7 @@ function setup(){
     treesGroup = new Group();
 
     score = 0;
-    player.debug=true;
+    player.debug=false;
     
 }
 
@@ -149,7 +149,7 @@ function spawn(){
     var obstacle = createSprite(width+10,528,10,40);
     //obstacle.velocityX = -(4 + 3*score/100);
     //obstacle.debug = true;
-    obstacle.velocityX = -5;
+    obstacle.velocityX = -8;
     obstacle.debug=false;
     //generate random obstacles
     var rand = Math.round(random(1,6));
@@ -184,7 +184,7 @@ function spawnTrees(){
           var trees = createSprite(width+5,450,10,40);
           //trees.velocityX = -(2 + 3*score/100);
           //obstacle.debug = true;
-          trees.velocityX = -5;
+          trees.velocityX = -8;
           trees.debug=false
           ;
       
